@@ -1,0 +1,14 @@
+{
+  "name": "jubilant-pancake",
+  "version": "0.1.0",
+  "description": "A most jubilant pancake",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickoram/jubilant-pancake.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/nickoram/jubilant-pancake#readme"
+}

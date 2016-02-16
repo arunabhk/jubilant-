@@ -13,6 +13,12 @@ io.on('connection', function(client) {
     });
 });
 
-server.listen(8080, function() {
-    console.log("Listening on Port 8080");
-});
+server.listen(
+    process.env.VCAP_APP_PORT || 8080,
+    process.env.VCAP_APP_HOST || 'localhost',
+    function() {
+        var host = this.address().address;
+        var port = this.address().port;
+        console.log("Listening at http://%s:%s", host, port);
+    }
+);

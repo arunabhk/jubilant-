@@ -10,5 +10,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://github.com/nickoram/jubilant-pancake#readme"
+  "homepage": "https://github.com/nickoram/jubilant-pancake#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
 }

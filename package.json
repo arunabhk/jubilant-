@@ -11,6 +11,9 @@
   "author": "",
   "license": "ISC",
   "homepage": "https://github.com/nickoram/jubilant-pancake#readme",
+  "scripts": {
+      "start": "node app.js"
+  },
   "dependencies": {
     "express": "^4.13.4",
     "jquery": "^2.2.0",

@@ -1,3 +1,5 @@
 (function() {
-    console.log("Welcome to Jubliant Pancake");
+    console.log("Welcome to Jubilant Pancake");
+
+    var socket = io();
 })();

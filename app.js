@@ -12,7 +12,6 @@ io.on('connection', function(client) {
     client.on('message', function(message) {
         client.broadcast.emit('message', message);
     });
-
 });
 
 server.listen(

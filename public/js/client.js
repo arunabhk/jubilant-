@@ -2,19 +2,20 @@
     console.log("Welcome to Jubilant Pancake");
 
     var server = io();
-    var $textarea = $('textarea');
+    $document = $(document);
 
-    $textarea.on('change keyup paste', function() {
+    $document.on('change keyup paste', 'textarea', function() {
         server.emit('message', this.value);
     });
 
-    $('.clear').on('click', function() {
+    $document.on('click', '.clear', function() {
+        var $textarea = $('textarea');
 		$textarea.val('');
         $textarea.trigger('change');
 	});
 
     server.on('message', function(data) {
-        $textarea.val(data);
+        $('textarea').val(data);
     });
 
 })();

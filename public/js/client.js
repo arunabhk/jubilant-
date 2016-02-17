@@ -1,27 +1,20 @@
-$(function() {
+(function() {
     console.log("Welcome to Jubilant Pancake");
 
     var server = io();
+    var $textarea = $('textarea');
 
-    $('body').on('change keyup paste', 'textarea', function() {
+    $textarea.on('change keyup paste', function() {
         server.emit('message', this.value);
     });
 
+    $('.clear').on('click', function() {
+		$textarea.val('');
+        $textarea.trigger('change');
+	});
+
     server.on('message', function(data) {
-        $('textarea').val(data);
+        $textarea.val(data);
     });
 
-	$('.collaborators-list').show();
-
-	$('.clear').click(function(){
-		$('textarea').val('');
-	});
-
-	$('.collaborators-show').click(function(){
-		$('.jumbotron' + '.collaborators-list').show();
-	});
-
-	$('.collaborators-hide').click(function(){
-		$('.jumbotron' + '.collaborators-list').hide();
-	});
-});
+})();

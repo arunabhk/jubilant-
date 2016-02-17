@@ -12,11 +12,16 @@
   "license": "ISC",
   "homepage": "https://github.com/nickoram/jubilant-pancake#readme",
   "scripts": {
-      "start": "node app.js"
+      "start": "node app.js",
+      "test" : "nodemon -e js,ejs app.js"
   },
   "dependencies": {
     "express": "^4.13.4",
     "jquery": "^2.2.0",
-    "socket.io": "^1.4.5"
+    "socket.io": "^1.4.5",
+    "ejs": "latest"
+  },
+  "devDependencies": {
+    "nodemon": "latest"
   }
 }

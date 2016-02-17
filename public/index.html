@@ -1,20 +1,80 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<meta charset="UTF-8">
 	<title>Jubilant Pancake</title>
-
-	<script src="/jquery/jquery.min.js"></script>
-	<script src="/socket.io/socket.io.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/stylesheets/style.css">
 </head>
-
 <body>
-	<h1>Jubilant Pancake</h1>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img class="brandImage" src="/images/logo2.jpg" alt="IBM logo"><span class="subhead"></span></a>
+			</div><!-- navbar-header -->
+			<div class="collapse navbar-collapse" id="collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/"></a></li>
+					<li class="collaborators-show"><a href="#">Collaborators</a></li>
+				</ul>
+			</div><!-- collapse navbar-collapse -->
+		</div><!-- container -->
+	</nav>
 
-	<textarea></textarea>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="jumbotron textarea container">
+					<h2 class="editor">JUBILIANT PANCAKE</h2>
+					<button class="btn btn-sm btn-info reload"><a href="/">Reload</a></button>
+					<button class="btn btn-sm btn-info clear">Clear</button>
+					<textarea></textarea>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="jumbotron collaborators-list container">
+					<p><strong>Collaborators</strong>: <button class="btn btn-sm btn-info collaborators-hide">Hide</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade container" id="modal-1">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class ="close" data-dismiss="modal"><i class="fa fa-times"></i></button>
+				</div>
+				<div class="modal-body text-center">
+					<p class="text-center">
+						Please Enter your name:
+					</p>
+					<input type="text" class="contributer-modal"></input>
+				</div>
+			</div>
+		</div><!-- modal-dialog -->
+	</div><!-- modal fade -->
+
+	<footer class="footer">
+		<div class="container">
+			<p class="footnote">&copy; 2016</p>
+		</div>
+	</footer>
 
 	<!-- load scripts last -->
+	<script src="/jquery/jquery.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script src="/js/client.js"></script>
 </body>
 

@@ -1,0 +1,71 @@
+body{
+	background: url('/images/background.jpg');
+}
+button{
+	float: right;
+	margin-right: 0.5em;
+	margin-bottom: 1em;
+}
+
+.textarea textarea{
+	width:100%;
+	height:100%;
+	margin: 0;
+	margin-top: 0.5em;
+	resize: vertical;
+	margin-bottom: 0;
+	min-height: 30em;
+}
+
+.jumbotron.textarea{
+	padding: 1em;
+}
+.navbar-brand{
+	margin-top: 0;
+	padding-top: 0;
+}
+
+img.brandImage{
+	height: 2.8em;
+	width: 11.1em;
+}
+
+.editor{
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+footer{
+	background-color: #e7e7e7;
+	position: fixed;
+	bottom: 0em;
+	width: 100%;
+	border-radius: 2em;
+}
+
+footer p.footnote {
+	float: right;
+}
+
+#modal-1{
+	width: 100%;
+}
+
+.modal-header{
+	padding-bottom: 0em;
+}
+
+.collaborators-list{
+	height:30%;
+	padding-top: 0.5em;
+	padding-bottom: 0em;
+}
+
+.collaborators-hide{
+	margin-right: 0em;
+}
+
+.reload a{
+	color:inherit;
+}

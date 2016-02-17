@@ -17,8 +17,6 @@ $(function() {
 		$('textarea').val('');
 	});
 
-	//$('#modal').modal('show');
-
 	$('.collaborators-show').click(function(){
 		$('.jumbotron' + '.collaborators-list').show();
 	});

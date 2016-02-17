@@ -4,7 +4,8 @@ var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
 var state = {
-    message: ""
+    message: "",
+    flapjacks: []
 };
 
 app.use(express.static(__dirname + '/public'));
@@ -17,6 +18,10 @@ io.on('connection', function(client) {
     client.on('message', function(data) {
         state.message = data;
         client.broadcast.emit('message', state);
+    });
+
+    client.on('join', function(data) {
+        state.flapjacks.push(data);
     });
 });
 

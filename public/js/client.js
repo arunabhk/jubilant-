@@ -10,6 +10,7 @@
 
     server.on('join', function(state) {
         $('textarea').val(state.message);
+        server.emit('join', (new Date()).getTime());
     });
 
     $document.on('change keyup paste', 'textarea', function() {

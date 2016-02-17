@@ -4,6 +4,14 @@
     var server = io();
     $document = $(document);
 
+    server.on('message', function(state) {
+        $('textarea').val(state.message);
+    });
+
+    server.on('join', function(state) {
+        $('textarea').val(state.message);
+    });
+
     $document.on('change keyup paste', 'textarea', function() {
         server.emit('message', this.value);
     });
@@ -13,9 +21,5 @@
 		$textarea.val('');
         $textarea.trigger('change');
 	});
-
-    server.on('message', function(data) {
-        $('textarea').val(data);
-    });
 
 })();

@@ -3,14 +3,20 @@ var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
+var state = {
+    message: ""
+};
+
 app.use(express.static(__dirname + '/public'));
 app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist'));
 
 io.on('connection', function(client) {
     console.log("A wild flapjack has appeared");
+    client.emit('join', state);
 
-    client.on('message', function(message) {
-        client.broadcast.emit('message', message);
+    client.on('message', function(data) {
+        state.message = data;
+        client.broadcast.emit('message', state);
     });
 });
 

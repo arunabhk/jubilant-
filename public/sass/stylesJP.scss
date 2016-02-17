@@ -1,0 +1,62 @@
+$bgc-main: #AA5AFF;
+$bgc-second: #8F69BB;
+$textColour-Light: #FFF;
+$textColour-Dark: #58007E;
+
+//vendor Mixin
+//example: @include prefix((box-shadow:5px 5px 5px),[optional - limit the prefexs used])
+@mixin prefix($map, $vendors: webkit moz ms o) {
+    @each $prop,
+    $value in $map {
+        @if $vendors {
+            @each $vendor in $vendors {
+                #{"-" + $vendor + "-" + $prop}: #{$value};
+            }
+        }
+        // Dump regular property anyway
+        #{$prop}: #{$value};
+    }
+}
+
+@mixin font-Bold() {
+    font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'Roboto', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-weight: 600;
+    font-stretch: normal;
+}
+@mixin font-Light() {
+    font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'Roboto', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-weight: 300;
+    font-stretch: normal;
+}
+@mixin font-Thin() {
+    font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'Roboto', "Arial", sans-serif;
+    font-weight: 100;
+    font-stretch: normal;
+    letter-spacing: 0.4rem;
+}
+
+body{
+    height: 100%;
+    background-color: $bgc-second;
+}
+
+div#container{
+    margin: 0 auto;
+    max-width: 900px;
+    min-width: 300px;
+    padding: 0 40px;
+    background-color: $bgc-main;
+}
+
+h1{
+    @include font-Bold();
+    font-size: 3rem;
+    color: $textColour-Light;
+}
+
+.header{
+    img{
+        float: right;
+    }
+
+}

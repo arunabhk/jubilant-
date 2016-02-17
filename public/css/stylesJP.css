@@ -1,0 +1,22 @@
+body {
+  height: 100%;
+  background-color: #8F69BB; }
+
+div#container {
+  margin: 0 auto;
+  max-width: 900px;
+  min-width: 300px;
+  padding: 0 40px;
+  background-color: #AA5AFF; }
+
+h1 {
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'Roboto', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 600;
+  font-stretch: normal;
+  font-size: 3rem;
+  color: #FFF; }
+
+.header img {
+  float: right; }
+
+/*# sourceMappingURL=stylesJP.css.map */

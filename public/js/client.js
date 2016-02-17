@@ -23,7 +23,7 @@ $(function() {
 		$('textarea').val('');
 	});
 
-	//$('#modal-1').modal('show');
+	//$('#modal').modal('show');
 
 	$('.collaborators-show').click(function(){
 		$('.jumbotron' + '.collaborators-list').show();

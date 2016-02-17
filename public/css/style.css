@@ -25,6 +25,7 @@ button {
 img.brandImage {
     height: 2.8em;
     width: 11.1em;
+    background: url('/images/logo2_white.gif');
 }
 .editor {
     float: left;

@@ -35,14 +35,14 @@ table {
 
 html, body {
   height: 100%;
-  background-color: #8F69BB; }
+  background-color: #506E94; }
 
 div#container {
   margin: 0 auto;
   max-width: 900px;
   min-width: 300px;
   padding: 0 150px;
-  background-color: #AA5AFF;
+  background-color: #229AD2;
   height: 100%;
   -webkit-box-shadow: 0px 10px 18px rgba(78, 55, 104, 0.75);
   -moz-box-shadow: 0px 10px 18px rgba(78, 55, 104, 0.75);
@@ -87,7 +87,7 @@ h1 {
     float: right;
     display: inline-block;
     text-decoration: none;
-    color: #58007E;
+    color: #1B3562;
     padding: 5px;
     font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'Roboto', "Arial", sans-serif;
     font-weight: 100;
